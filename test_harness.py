@@ -33,8 +33,8 @@ def test_compareMeans():
 def test_compareMedians():
     dataSet1 = df_in[df_in[splitCol]==group1]
     dataSet2 = df_in[df_in[splitCol]==group2]
-    mean1 = dataSet1[comparedCol].mean()
-    mean2 = dataSet2[comparedCol].mean()
+    mean1 = dataSet1[comparedCol].median()
+    mean2 = dataSet2[comparedCol].median()
     correctAnswer = mean1-mean2
     #print(correctAnswer == solution_file.compareTwoMedians())
     assert correctAnswer == solution_file.compareTwoMedians()
